@@ -6,6 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:production": "npm run build && http-server dist/client -bg -c-1 -d false -i false -p 8080",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",

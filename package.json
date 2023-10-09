@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run prepare && concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:production": "npm run prepare && concurrently \"npm run start:server:production\" \"npm run start:client:production\"",
     "start:server": "cd server && npm start",
+    "start:server:production": "cd server && npm run start:production",
     "start:client": "cd client && npm start",
+    "start:client:production": "cd client && npm run start:production",
     "prepare": "concurrently \"npm run prepare:server\" \"npm run prepare:client\"",
     "prepare:server": "cd server && npm install",
     "prepare:client": "cd client && npm install",

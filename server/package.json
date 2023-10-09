@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
+    "start:production": "npm run build && node dist/server.js",
     "build": "tsc",
     "test": "eslint ."
   },
